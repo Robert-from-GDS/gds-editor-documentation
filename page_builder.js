@@ -1,13 +1,14 @@
-var navBar;
-var contentContainer;
+var navBar;// html dom element - inject constructed list here- 
+var contentContainer;// html dom element - inject fetched pages here
 var lastPageViewed=null;// stores an id of the last page looked at
 var next=null;//holds link to next itemID
 var previous=null;//holds link to previous item in list
-var flatList=[];
-var nextButton=null;
-var previousButton=null;
+var flatList=[];// create a flat list for easy retreival and index determination
+var nextButton=null; // html dom element 
+var previousButton=null; // html dom element 
 
-/*Flattening-----------------------------------------------------------------||*/
+/*--Flattening-----------------------------------------------------------------||*/
+//called on build after page load
 function flattenDocsStructure(){
 	flatList.length=0;
 	for(let i=0; i < GDS_DOCS_contents.structure.length; i++){
@@ -32,7 +33,7 @@ function flattenCategoryItems(category){
 		}
 	}
 }
-/*----------END FALETTING------------------*/
+/*------------END FALETTING------------------*/
 
 
 
@@ -106,16 +107,11 @@ function buildPageLi(item){
 
 
 
-//Nav bar content--||
-
-
 function buildContentDisplay(){
 	contentContainer=document.createElement("div");
 	contentContainer.id="GDScontentContainer";
 	return contentContainer;
 }
-
-
 
 
 
@@ -133,9 +129,6 @@ function buildNextAndPreviousButtons(){
 	previousButton.id="previousButton";
 	previousButton.innerHTML="previous page";
 }
-
-
-
 
 
 
@@ -284,6 +277,7 @@ function buildGDSEDocs(){
 		flattenDocsStructure();
 		buildNextAndPreviousButtons();
 }
+
 
 
 
