@@ -1,0 +1,42 @@
+<?php
+header("X-Content-Type-Options: nosniff");
+header("Permissions-Policy: fullscreen=(), geolocation=(), camera=(), microphone=()");
+ini_set('display_errors', 0);
+ini_set('session.cookie_secure', '1');
+ini_set('session.cookie_httponly', '1');
+ini_set('session.gc_maxlifetime', 14400);
+ini_set('session.cookie_samesite', 'Lax'); // Set SameSite attribute
+session_start();?>
+<!DOCTYPE html> 
+<html>
+	
+<head>					
+	<title>GDS editor Documentation</title>
+	<link rel="icon" type="image/png" href="../img/ico.png" />
+	<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<?php include_once('../../header_footer/css_version.php');?>
+	<link rel='stylesheet' href='gds-docs-v1.css' type='text/css' />
+	<link rel="icon" type="image/png" href="../img/ico.png" />
+	<script src='content.js'></script>
+
+	
+</head>
+
+
+
+<body style=''>
+	<!--header-->
+	<?php include( '../../header_footer/header.php');?>
+	<div id="pageWrapper" style="width:100%">
+	
+	</div><!-- close page wrapper-->
+	
+			
+	<?php  include( '../../header_footer/footer.php'); ?>
+</body>
+</html>
+<script>
+buildGDSEDocs();
+</script>

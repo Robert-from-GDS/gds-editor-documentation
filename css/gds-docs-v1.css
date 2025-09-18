@@ -1,0 +1,38 @@
+
+
+div#gdse_docs_navBar{color:#003741;width:16%;border-right:1px solid #009ebb; display:inline-block; vertical-align:top; padding-left:2%;padding-right:2%}
+div#GDScontentContainer{width:70%; display:inline-block; vertical-align:top; border:0px solid #009ebb;padding-left:2%;}
+
+div.GDSE_navbar_pageTitle{border-bottom:0px solid #79e1e1; cursor:pointer; padding:.5em 1em; border-radius:5px;}
+div.navBarCategoryHolder{}
+	div.GDSE_navbar_categoryHeader{border-bottom:0px solid #79e1e1; cursor:pointer; padding:.5em 1em;border-radius:5px;}
+	div.navBarCategoryDropDown{margin-left:2em;background-color:#d4fcfc; border-radius:0px 0px 9px 9px;}
+	div.GDSE_navbar_categoryTitle{border-bottom:0px solid #79e1e1; cursor:pointer; padding:.5em 1em;border-radius:5px;}
+
+
+div#GDScontentContainer h1{}
+div#GDScontentContainer h2{}
+div#GDScontentContainer p{font-size:1.2em; line-height:1.5em;}
+div#GDScontentContainer p.title{font-size:1.4em;font-weight:900;}
+div#GDScontentContainer p.subTitle{font-size:1.2em;font-weight:700;}
+div#GDScontentContainer .tip{padding:1em;border-radius:.2em; background-color:#c9ffff; border:2px dashed #62deff; margin:1em 0em; font-size:1em;}
+div#GDScontentContainer .warning{padding:1em;border-radius:.2em; background-color:#fffabe; border:2px dashed #ffd42a; margin:1em 0em;font-size:1em;}
+div#GDScontentContainer .important{padding:1em;border-radius:.2em; background-color:#ffcbcb; border:2px dashed #ff5c5c; margin:1em 0em;font-size:1em;}
+div#GDScontentContainer a{}
+div#GDScontentContainer table{width:100%;border:1px solid #79e1e1;border-collapse: collapse;border-radius:7px;}
+div#GDScontentContainer table th{border:1px solid #79e1e1;border-collapse:collapsed;padding:.8em;}
+div#GDScontentContainer table td{border:1px solid #79e1e1;border-collapse:collapsed;padding:.8em;}
+div#GDScontentContainer ul{}
+div#GDScontentContainer li{padding:.5em; }
+div#GDScontentContainer img{border-radius:7px;}
+
+div.paginationSpacer{height:2em; border-top:1px solid #79e1e1; margin-top:2em;}
+div#nextButton{ padding:2em; border:1px solid #79e1e1; border-radius:5px;background:#d4fcfc;}
+div#previousButton{margin-right:2em; padding:2em; border:1px solid #79e1e1;border-radius:5px;background:#d4fcfc;}
+.inline{display:inline-block; vertical-align:top}
+.pointer{cursor:pointer}
+.navHover{background:#ffffff}
+.navHover:hover{background:#79e1e1;}
+.hotkey{padding:.3em; border:1px solid #009ebb;border-radius:5px; background-color:#d7fdfd; color:#005777}
+.docLink{padding:.3em; border:1px solid #009ebb;border-radius:5px; background-color:#79e1e1; color:#005777; cursor:pointer;}
+.space{height:3em;}

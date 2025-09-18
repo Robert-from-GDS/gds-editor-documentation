@@ -1,0 +1,48 @@
+
+
+<!-- hot link a dc page with an onlick <button class="docLink" onclick="docLink('COMPOS')";>find document by id</button>-->
+<!-- useful classes are - p class="title", p class="subTitle"  <p class="warning"></p> <p class="important">  <p class="tip"></p>-->
+<h1>System Requirements</h1>
+
+<p>
+GDS Editor is designed exclusively for desktop environments. While it can technically load on mobile devices, the experience is poor, and mobile support is not a development priority.
+</p>
+
+<p>
+The editor has been tested across all major desktop browsers to ensure broad compatibility. However, some specific issues may still occur depending on the browser and operating system. For details, please refer to the <small class="docLink" onclick="docLink('KNOWNISSUES')">known Issues</small> page.
+</p>
+<p>
+The minimum supported screen resolution is 1280×720 (HD). For the best experience, a resolution of 1920×1080 (Full HD) or higher is recommended.
+</p>
+
+
+<p class="warning">
+There is a known fingerprinting issue when running GDS Editor in the Brave browser. For more information, consult <small class="docLink" onclick="docLink('KNOWNISSUES')">known Issues</small>.
+</p>
+
+<p class="warning">
+Some macOS browsers experience problems rendering blur effects. If you encounter this, I recommend switching to a browser that supports hardware-accelerated blur rendering. See <b onclick="docLink('KNOWNISSUES')">Known Issues</b> for details.
+</p>
+
+
+
+<p class="important"><b>Important</b> Please Read</p>
+<p class="title">GDS Editor Memory Management</p>
+
+<p>
+With the exception of GDS Plus features such as library access and plotting, GDS Editor does not place hard limits on what you can create. The application will allow you to import as many components as your system’s memory can handle. You can create multiple scenes, categories, and duplicates across tabs without restriction. Scenes and canvas areas are effectively infinite in size, extending thousands of pixels, and the brush tools can generate paths of unlimited length.
+</p>
+
+<p>
+Because of this freedom, it is possible to exhaust your available memory and cause the browser tab (or even the system) to crash. You are responsible for managing your own projects, which includes deleting unused components, refreshing the browser when necessary, and keeping your open scenes at a manageable scale. The stability of the editor depends on the available memory and performance capacity of your local machine.
+</p>
+
+<div class="tip">
+	<strong>Tips for Managing Memory in a Scene:</strong>
+	<ul>
+	  <li>Regularly save scenes as local files to free memory and prevent data loss.</li>
+	  <li>Limit the number of scenes you keep open simultaneously. Each tab consumes its own memory regardless of scene size.</li>
+	  <li>Be mindful of the number and size of components you add. Large PNG files or high-resolution SVGs can consume significant amounts of memory.</li>
+	  <li>If you are working on a low-spec machine, keep scenes lightweight by reducing the number of components and avoiding unnecessarily large assets.</li>
+	</ul>
+</div>

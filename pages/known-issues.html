@@ -1,0 +1,60 @@
+<h1>Known issues</h1>
+
+<p class="subTitle">Images and Assets on the Scene Canvas are unselectable or do not drag</p>
+
+<p><strong>Possible Cause 1: Browser Anti-Fingerprinting Blocker</strong></p>
+<p>Some browsers, such as Brave and Safari in privacy mode, use anti-fingerprinting technology to prevent websites from tracking users through unique browsing behaviors. One of the techniques blocked by these privacy settings is mouse movement tracking.</p>
+
+<p>Since GDS Editor relies on drag-and-drop functionality, it needs to track your mouse movements for legitimate reasons. If your browser's anti-fingerprinting settings block this, no mouse movement data can be sent to the application, making drag-and-drop interactions impossible.</p>
+
+<div class="tip">
+<p><strong>Solution:</strong> Disable the fingerprint blocker for GDS Editor in your browser's privacy settings to restore drag-and-drop functionality.</p>
+</div>
+		
+    
+<p><strong>Possible Cause 2: Bug in the Application</strong></p>
+<p>If drag-and-drop functionality was previously working but suddenly stops, it is possible that an error occurred during execution, preventing further interactions.</p>
+
+<div class="tip">
+<p><strong>Solution:</strong> If you are an advanced user, you can try opening the browser's developer console, clearing the debug log, and then closing the console. If you can't do this, save your work and refresh the page and reload your scene.</p>
+</div>
+
+
+<p class="subTitle">Images and Files Are Not Saving to local disk</p>
+<p><strong>Possible Cause: Browser Blocking Downloads from GameDeveloperStudio</strong></p>
+<p>For security reasons, some browsers may block websites from saving files, such as PNGs and ZIPs, to your local machine. This can happen due to strict security settings, browser extensions, or privacy features.</p>
+
+<div class="tip">
+<p><strong>Solution:</strong></p>
+<ul>
+    <li>Check your browser’s security or privacy settings and ensure that downloads from GameDeveloperStudio are allowed.</li>
+    <li>Look for any browser prompts asking for permission to save files and approve them.</li>
+    <li>Try disabling any extensions that might interfere with downloads, such as ad blockers or privacy-focused plugins.</li>
+    <li>If using a privacy-focused browser like Brave, Safari, or Firefox with enhanced tracking protection, adjust the settings to allow downloads from this site.</li>
+    <li>Consider using a different browser or an alternative download method if the issue persists.</li>
+</ul>
+</div>
+
+
+
+
+<p class="title">Bugs</p>
+
+<p>The following issues are bugs and therefore don;t have workarounds until I can fix get round to fixing them, for the most part the current issues are minor and do have some work arounds and wehere possible I have detailed them below</p>
+
+<p>Fixed!<s>Rotated assets do not calculate the correct alignment</s></p>
+<p>Fixed!<s>When tring to align and distribute rotated elemen on the scene, the alignment distrbution is not calulated properly.</s></p>
+<p>Fixed!<s>Solution: enable the grid, and manually align rotated element with drag and drop</s></p>
+
+<p>Fixed!<s>Snapping grid alignment can sometimes be one pixel off</s></p>
+<p>Fixed!<s>There's a suspected rounding issue when snapping tiles to the alignment grid. occasionally a tile won't  line up correctly to the grid by one pixel. Until I can get round to looking deeply into snapping and alignment improvements the current fix is to resnap the tile and it should work.</s> </p>
+
+<p>Color changes on GDS art objects[svg] reset</p>
+<p>Depending on the order of application hsl color changes can sometimes reset when appliing a second color effect. Fix. use the tick to bake the color changes after every filter application.</p>
+
+<p>Fixed!<s>GDS simple text doesn't appear on exported scenes</s></p>
+<p>Fixed!<s>This is caused by badly set text x and y positions. This issue has priority and It will probably be fixed by next release. In the mean time the only fix is to manually reset the x and y position of the simple text component in the transform inspector dialog.</s></p>
+	
+	
+<p>Fixed!<s>Axis lock not applied properly to transformer rectangle</s></p>
+<p>Fixed!<s>When dragging along one axis [alt key + drag] the group selection retangle does not follow the drag direction or becomes offset until drag is released: low priority, components in selection are dragged along the axis corecctly. No fix work around necessary.</s></p>
