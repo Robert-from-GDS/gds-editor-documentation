@@ -1,2 +1,74 @@
-<h1>Components introduction</h1>
-<p>GDS editor has a collection of tools</p>
+<h1>Components Introduction</h1>
+
+<p>
+Unlike a basic drawing app (which GDS Editor is not), you can create many different kinds of graphical objects on your scene.  
+Each object you create or import is called a <b>“component”</b>.  
+Depending on its <b>"component type"</b>, it has its own unique properties and abilities.  
+</p>
+
+<p><b>For example:</b> <br>
+✅ A <b>Text Component</b> has properties like <i>bold</i>, <i>italic</i>, and abilities like changing text content or color</br> 
+✅ An <b>Image Component</b> has properties like <i>hue</i>, <i>saturation</i>, and abilities like adjusting brightness or filters.  
+</p>
+
+<p>
+GDS Editor manages all aspects of components, giving you a clean and simple UI for editing them. However,
+it’s important to understand that even if two components <i>look</i> the same on the scene, they may behave differently based on their "component type". 
+For example, a  photo or image  of text  looks like text but can’t be edited (font, size, bold, etc.), while a  GDS text component  is fully editable in a textual way.
+</p>
+
+<div class="tip">
+<p>
+💡 <b>Tip for game devs:</b> If you come from a game development background, think of GDS Editor like a “game art engine”.  
+Just like in a standard game engine, different component types can be created or imported, each with their own properties and methods.  
+</p>
+</div>
+<div class="space"></div>
+<p class="subTitle">📂 GDS Editor Component Types</p>
+<p>
+The current version of GDS Editor lets you create or import the following component types, each with their own abilities  and properties :
+</p>
+
+<table style="width:60%">
+  <tr>
+    <td><b>Component</b></td>
+    <td><b>Description</b></td>
+    <td><b>Details</b></td>
+  </tr>
+
+  <tr>
+    <td>GDS Art Object</td>
+    <td>Special art components with color palettes, flexible strokes, and toggleable features</td>
+    <td><small onclick="docLink('')">Details</small></td>
+  </tr>
+  <tr>
+    <td>SVG</td>
+    <td>Scalable vector graphics file (perfect for logos & icons)</td>
+    <td><small onclick="docLink('')">Details</small></td>
+  </tr>
+  <tr>
+    <td>Bitmap / Raster (PNG, JPEG)</td>
+    <td>Image elements for scenes, textures, and photos</td>
+    <td><small onclick="docLink('')">Details</small></td>
+  </tr>
+  <tr>
+    <td>Simple Text Component</td>
+    <td>Editable drag-and-drop text objects</td>
+    <td><small onclick="docLink('')">Details</small></td>
+  </tr>
+  <tr>
+    <td>Texture Backgrounds</td>
+    <td>Tiling panels with editable textures and patterns</td>
+    <td><small onclick="docLink('')">Details</small></td>
+  </tr>
+  <tr>
+    <td>GUI Panels & Buttons</td>
+    <td>Components with editable features for GUI creation</td>
+    <td><small onclick="docLink('')">Details</small></td>
+  </tr>
+  <tr>
+    <td>Title Text</td>
+    <td><i>Currently in development 🚧</i></td>
+    <td><small onclick="docLink('')">Details</small></td>
+  </tr>
+</table>
