@@ -15,9 +15,9 @@ div#GDScontentContainer h2{}
 div#GDScontentContainer p{font-size:1.2em; line-height:1.5em;}
 div#GDScontentContainer p.title{font-size:1.4em;font-weight:900;}
 div#GDScontentContainer p.subTitle{font-size:1.2em;font-weight:700;}
-div#GDScontentContainer .tip{padding:1em;border-radius:.2em; background-color:#c9ffff; border:2px dashed #62deff; margin:1em 0em; font-size:1em;}
-div#GDScontentContainer .warning{padding:1em;border-radius:.2em; background-color:#fffabe; border:2px dashed #ffd42a; margin:1em 0em;font-size:1em;}
-div#GDScontentContainer .important{padding:1em;border-radius:.2em; background-color:#ffcbcb; border:2px dashed #ff5c5c; margin:1em 0em;font-size:1em;}
+div#GDScontentContainer .tip{padding:.8em;border-radius:7px; background-color:#c9ffff; border:2px dashed #62deff; margin:1em 0em; font-size:1em;}
+div#GDScontentContainer .warning{padding:.8em;border-radius:7px; background-color:#fffabe; border:2px dashed #ffd42a; margin:1em 0em;font-size:1em;}
+div#GDScontentContainer .important{padding:.8em;border-radius:7px; background-color:#ffcbcb; border:2px dashed #ff5c5c; margin:1em 0em;font-size:1em;}
 div#GDScontentContainer a{}
 div#GDScontentContainer table{width:100%;border:1px solid #79e1e1;border-collapse: collapse;border-radius:7px;}
 div#GDScontentContainer table th{border:1px solid #79e1e1;border-collapse:collapsed;padding:.8em;}
