@@ -1,0 +1,301 @@
+<h1 style="font-size:3em">Gds editor change log</h1>
+<p>Change log history  starts a little informal but with the release of the GDS documents I hope to formallize changes. Latestes changes will be displayed at the top.</p>
+<div class="space"></div>	
+	
+<p class="subTitle">September 19th 2025</p>
+<ul>
+<li>Changed information dialog display. When selecting mulitple components the information dialog will show , total count and component type count for selected components</li>
+<li>Fixed issue: Selection information now auto closes on dialog focus loss.</li>
+<li>Library windows will close when importing completes</li>
+</ul>
+
+
+
+
+
+
+
+<p class="title">Pre document release un organized change log data</p>
+<ul>
+  <li>— Added F2 component renaming. Hit F2 on selected components to open the component action dialog and highlight the name input, ready for renaming. You can now also set the same name on multiple components. If no components are selected when you press F2, the scene name will be selected, ready for input.</li>
+  
+  <li>— Added Flatten Component/Components. Flattening will turn any component or group of selected components into a single PNG component. Text, GDS art, and texture components will be converted to PNG components.</li>
+  
+  <li>— Added "Add To" buttons to the top of the inventory window.</li>
+  
+  <li>— Libraries and inventories return to the top when navigating to a new page.</li>
+  
+  <li>— When sending components to a new category tab, that tab is automatically opened in the scene palette.</li>
+  
+  <li>— Fixed an issue with Color Scan not updating color changes from the Color Slider window.</li>
+  
+  <li>— Fixed a bug where the Color Slider reset color changes made in the Color Scan window.</li>
+  
+  <li>— Added Quick Window Close function: Users can quickly close the last opened dialog using the <span class="hotKey">X</span> hotkey, freeing up scene space.</li>
+  
+  <li>— Added Layer Animation. Users combining frames to create spritesheets can now preview the animation.</li>
+  
+  <li>— Added Slice Animation Preview. Users slicing spritesheets into frames can preview the animation.</li>
+  
+  <li>— Right-clicking on the scene opens the Add Component window.</li>
+  
+  <li>— Selection information and guides are now displayed directly on the scene.</li>
+  
+  <li>— Added more Google Fonts and removed system fonts, which were dependent on user installation and often failed.</li>
+  
+  <li><b>— Fixed a bug affecting text component export dimensions. Text components will now export at the correct scale.</b></li>
+  
+  <li>— Highly improved the notification system to advise users of actions, failures, and errors. Users can block recurring alerts, and the alert system now features functional assistance—allowing users to complete actions directly from the alert dialog.</li>
+  
+  <li>— Exposed some configuration settings to the application UI, allowing users to adjust how the application works.</li>
+  
+  <li><b>— Improved Slicing</b></li>
+  
+  <li>— Rebuilt and reformatted the Slicing UI for a better slicing experience.</li>
+  
+  <li>— Slicing tool updates live on the scene with every slicing change.</li>
+  
+  <li>— Once confirmed, slices can be exported to a ZIP file, inserted into the scene, or visualized as animation frames in the animation window.</li>
+  
+  <li>— Slice data can now be exported as a JSON file for saving or importing into your game engine.</li>
+  
+  <li>— Added Open Slice Dialog hotkey: <span class="hotKey">Ctrl + Shift + S</span>. This will slice one selected component. If no or multiple components are selected, it will slice the scene area.</li>
+  
+  <li>— Improved inventory functionality. PNG and SVG files added to the inventory from the GDS Editor scene now retain their GDS data, including filters, effects, metadata, and animation data.</li>
+  
+  <li>— Rebuilt the hotkey system from the ground up using event codes, making hotkey presses stable and consistent across keyboard layouts and operating systems.</li>
+  
+  <li>— Improved cycling through components: use <span class="hotKey">Tab</span> to select next, <span class="hotKey">Backquote</span> to select the previous component. Hold <span class="hotKey">Shift</span> with either to add to selection.</li>
+  
+  <li>— The selection rectangle no longer shows for a single selected component when using the transform selection rectangle, avoiding a double rectangle effect. It will reappear when multiple components are selected.</li>
+  
+  <li>— Fixed bug with stuck modifier keys when users navigate away from the page while holding a key press.</li>
+  
+  <li>— Completely rewrote the Hotkey Helper class and added more hotkeys.</li>
+  
+  <li>— Modified the behavior of the <span class="hotKey">E</span> key:
+    <ul>
+      <li>Pressing <span class="hotKey">X</span> will close the last opened dialog window.</li>
+      <li>Pressing <span class="hotKey">Tab</span> will cycle through components in the scene.</li>
+      <li>Holding <span class="hotKey">Alt</span> with multiple components selected will lock drag movement to the axis of travel.</li>
+    </ul>
+  </li>
+  
+  <li>— Added a simple Brush Tool with future-proofed functions.</li>
+  
+  <li>— Added a Shape Tool with a collection of basic shapes.</li>
+  
+  <li>— Added Texture Panels.</li>
+  
+   <li>—Added Scalpel tool, remove, clone and extract pieces of components on the scene or parts of the scene in total.</li>
+   
+   <li>—Added stamp out - use any component to cut, clone or extract any part of another component</li>
+   
+    <li>—Added extract outline for bitmaps and rasters added to the scene, The function genrates brush stroke around the edges of raser images. now you can control the stroke weight of any png you have</li>
+	
+	
+</ul>
+
+	
+
+	
+	
+<h1>1.5.1</h1>
+<p class="header">Version 1.5 initial release Decemeber 08th 2024</p>	
+<ul>
+  <li>[1.5.2] Fixed selection rectangle issue with art component bounding box.</li>
+  <li>Added a new action inspector button, separating components transform data and component actions.</li>
+  <li>Changed the "properties inspector" dialog to "component transform" and changed the icon. Component actions are now in a spearate dialog - see above.</li>
+  <li>Changed the behaviour of the selection rectangle - when the selection rectangle end a selecting process , the previous selection is unselected. </li>
+  <li>Added dark grey to the workspace dropdown  background colors</li>
+  <li>Fixed inspector not closing when selected component is deleted</li>
+  <li>Added Skew x, y to the tranform dialog. Skew can still only be set from the tranform dialog and not from either the transformer or a skew tool</li>
+  <li>Added change hue to bitmap filters for SVG gds objects- User beware, svg objects also have their own hue select.</li>
+  <li>Moved scene settings to the scene palette header and changed icons to white. Freeing up extra space on the scene palette</li>
+  <li>Moved grid settings and snap toggle icon from the scene palette to the top right tool panel </li>
+  <li>Added meta data explorer for components-  review information cnocerning selected components, add description and keyword for storing indexing data</li>
+  <li>Added color select and color replace feature to the color slider dialog. You can now select a color within the svg and directly replace the color or shit the hue of the color to a new hue.</li>
+  <li>Added bake color effect function to color effect filters so that filters can be compounded,a simple allbeit slightly unintuitive solution to a difficult problem.</li>
+  <li>Moved luminance to color effects area in the svg color slider dialog. </li>
+  <li>Added  batch resize for resizing mulitple components in a percent factor</li>
+  <li>Completed transformer resize. Users can set the size of the selection transform box from the number input in the transform dialog box and the components will scale accordingly. </li>
+  <li>changed the form of the add component menu when the scene palette is closed</li>
+  <li>Added User details- GDS editor can now recognise users and user account types <i>Users must login via the website form</i></li>
+  <li>Improved the art object library - added more free assets.</li>
+  <li>Created a new PRO library allowing users to import assets from the gds editor esentials catalogue</li>
+</ul>
+
+
+
+
+
+
+<h1>Name Change</h1>
+<p>Following multiple recommendations from users, I have decided to take their advice and change the launch name of GDS Plus to GDS Editor. "GDS Plus" was not a descriptive name for the application. Although "GDS Editor" seems rather bland, it will have to do for now.</p>
+<p><b>Note</b>: Due to a short release time between 1.4.1 and 1.4.2 I'm including  the few newly added function to 1.4.2 here, as many users will be coming straight to 1.4.2 from 1.3</p>
+
+<h1>Behavior Changes</h1>
+<p class="header">This section documents changes in the existing behavior of the editor. These are functions that were present in GDS Editor 1.3 that have been modified or upgraded.</p>
+
+<ul>
+  <li>[1.4.2] - Improved export to function. Now duplicate file names will not be incremented when placed in a category folder unless there is a duplicate name in the folder already</li>
+  <li>[1.4.2] - Moved the selection rectangle box to the top of the scene, making selection rectangles visible when selecting multiple components over the top of each other</li>
+  <li>[1.4.2] - Temorarily removed welcome introduction, to be replaced with a top tips dialog in future updates</li>
+  <li>[1.4.2] - Improvements to the new scene panel</li>
+  <li>Importing a new asset will now place the asset in the center of the scene where you're working, instead of at the 0,0 [top-left] point. You no longer have to navigate the scene to find newly imported assets.</li>
+  <li>Newly imported assets are automatically added to the selection. Previously selected assets will be unselected.</li>
+  <li>Zoom speed has been slowed by 5%.</li>
+  <li>Zoom level can now be selected from the canvas bar as an input.</li>
+  <li>Changes to the "Add Component" menu on the scene palette in preparation for upcoming pro features. The aesthetic "Add" side tab has been removed to avoid clutter.</li>
+  <li>Minor style changes to the scene palette.</li>
+  <li>Removed the scene palette quick icon ["resize scene bounds"] and moved it to the scene settings menu. The Control + B key can still be used to rebind the scene.</li>
+  <li>Improved UI dialog management: dialogs are now displayed in the order they are opened, ensuring that the last opened dialog is always on top.</li>
+  <li>Moved the new scene creation button to the scene tab holder menu, instead of in the top bar.</li>
+  <li>You can now directly rename your scene using the scene name holder, without having to open the scene settings menu.</li>
+  <li>The art object properties inspector button will now display red if the selected component has switchable attributes.</li>
+  <li>Background alpha checkers can now be saved to the scene save state and toggled on and off as needed.</li>
+  <li><span class="hotKey">E key</span> export behavior has been modified. Now, when pressing the <span class="hotKey">E key</span>, there are three distinct export behaviors:
+    <ul>
+      <li>Pressing <span class="hotKey">E</span> with no objects selected will export a PNG of the scene area. Components outside the scene area will be clipped.</li>
+      <li>Pressing <span class="hotKey">E</span> with a single component selected will export an isolated PNG of that component.</li>
+      <li>Pressing <span class="hotKey">E</span> with multiple components selected will export the area of the scene occupied by the selected components' bounding box.</li>
+    </ul>
+  </li>
+  <li>Selected components will now only display a thin border to indicate they are selected. The blue background for selected components has been removed, as it interfered with visualizing color balance and contrast with components behind the selection.</li>
+  <li>Window panning: if you wish to move a selected component to a part of the scene outside of the current window, hovering the mouse at the edge of the window will pan the scene in that direction. Once you stop panning, your selection will be updated to reflect the new window offset.</li>
+  <li>The scene palette grid snap and grid toggle buttons now reflect the current grid state.</li>
+  <li>Added hotkey <span class="hotKey">Alt + G</span>.</li>
+  <li>The new scene button has been moved to the scene tab list.</li>
+  <li>Scene meta information is now displayed above the canvas.</li>
+  <li>Improved and easier-to-read layout in the transform and position inspector.</li>
+</ul>
+
+<p class="header">Batch Operations</p>
+<ul>
+  <li>Batch operations have had a major overhaul. The selection inspector has been removed, and stroke and color operations on multiple selected objects are now handled by the respective dialog boxes.</li>
+  <li>Batch hue, saturation, and color effects are now handled by the color slider dialog. This dialog provides access to color groups, which are extracted from all selected components. Although limited to a maximum of 100 color groups, the sliders will affect matching color groups across multiple components.</li>
+  <li>The stroke weight adjustment and selectable properties dialogs will now handle multiple selected components. Matching switchable features across themed asset packs can be triggered simultaneously.</li>
+  <li>The transform and component properties dialog now handles multiple components, displaying the size and dimensions of the selection area and the number of selected items. Furthermore, available actions are managed depending on whether multiple components are selected.</li>
+  <li>The export dialog will now also handle export operations on multiple selected components. You can export the selection area as a PNG, export selected items as individual PNGs, or send selected items to a new scene.</li>
+  <li>The text component dialog now handles multiple selected texts, although the text content of a text component cannot be changed in batch mode.</li>
+</ul>
+
+<p class="header">Exporter Tool</p>
+<p>The exporter tool has been completely overhauled. You can now precisely export any area of the canvas while you work.</p>
+<ul>
+  <li>Once an export area has been selected with the exporter tool, the size and area can be tweaked and modified instead of immediately exporting the area.</li>
+  <li>The bounds of the export area can be extended via the edge handles.</li>
+  <li>The area can be dragged and repositioned by dragging the middle of the export area.</li>
+  <li>The width and height of the export area are displayed on the bottom left of the area.</li>
+  <li>As well as exporting a PNG to your local disk, you can export a PNG to the current scene for further editing.</li>
+</ul>
+
+<p class="header">Color Scan Window</p>
+<ul>
+  <li>Selecting one color in the color scan window will now deselect all other color selections across all color domains (stroke, fill, gradient).</li>
+  <li>Holding the Shift key will allow you to select and swap multiple colors across all domains. However, non-keyboard users can still use the multi-select switch.</li>
+  <li>Minor improvements in color scan and replace layout.</li>
+  <li>All color select inputs will now use the new native color picker window, offering more options and a clearer way to pick colors. (See New Functions.)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<h1>New functions</h1>
+<p>As well as changes to the existing behaviour of the application, new features have been added to help you compose, edit and modify assets quicker and easier.</p>
+
+<p class="header">General additions</p>
+<ul>
+	<li>[1.4.2] Added object blend options to all components. Now you can set how an object blends with objects below it in the scene. Please not object blend options can only bee applied to components on a scene level. In other words the blending will affect all layers underneath the component with blend.</li>
+	<li>[1.4.2] Added repect z index to the scene palette layers - now the order in the scene palette will match the order in the scene.</li>
+	<li>[1.4.2] Added toggle box to respect z. you can also decide if you would like the scene palette layer order to respect the z index or not. If you prefer for layers not to move up and down when changing z-order you can toggle it on and off from the batch palette actions dialog at the bottom of the screen. This setting is off by deafult. this setting in saved across sessions.</li>
+	<li>[1.4.2] Added list select option to palette items. Use the control key to select all components under the first selected component. this function only works in a downward direction.</li>
+    <li>Added invert selection function <span class="hotKey">CTRL + 1</span></li>
+    <li>Convert an SVG to a PNG - save to local disk or add to scene via the export dialog in the right-hand inspector panel.</li>
+</ul>
+
+<p class="header">In-app color picker window</p>
+<p>GDS Editor 1.4 moves away from using browser color inputs for selecting colors to a more comprehensive color selecting solution. The color picking dialog starts as a good base to build in better color solutions. As a start, the color picker dialog provides the following color methods:</p>
+<ul>
+    <li>Replacement for all color input selectors across the entire application.</li>
+    <li>HSL sliders and a color panel.</li>
+    <li>Direct exposure of the hexadecimal color value, with setting and copy-paste capability.</li>
+    <li>Last selected color list. The color picker will store any previous colors you have selected, with a maximum history of 20.</li>
+    <li>Save color. If there is a specific color you need to save, you can add it to your saved color list and select it at a later time.</li>
+    <li>Color swatches. Although there are only a few available swatches with this release, I plan to add a more comprehensive selection of color swatches in the next minor update or patch.</li>
+    <li>Color theory. The color picker window will build color theory palettes for you, including common color combinations such as split complementary, triadic, tetradic complementaries, and monochrome scale.</li>
+</ul>
+
+<p class="header">Post-it Note Categories</p>
+<p>Although GDS Editor 1.3 had Post-it categories, their management methods were not exposed, and they were only available in prebuilt GDS scenes.</p>
+<ul>
+    <li>Create subcategories in your palette to manage components on your scene. Use side tabs to easily select components in the scene subcategory.</li>
+    <li>Manage subcategories by right-clicking or double-clicking on their tabs. Rename, select color themes, and delete categories using the category editor options.</li>
+    <li>Deleting a category sends components to the main category.</li>
+    <li>Creating a category with selected components sends the selected components to the category.</li>
+    <li>The category add button at the base of the palette can be used to move components between categories.</li>
+</ul>
+
+<p class="header">Text properties</p>
+<p>Line height, letter spacing, and text shadow have been added to the simple text component.</p>
+<p class="warning">There are still some loading issues and font issues which vary across browsers.</p>
+
+<p class="header">External copy and pasting</p>
+<p>You can now copy and paste objects to and from applications outside of GDS Editor. If the component base is an SVG, you can use the <b>Alt + C</b> to copy out the SVG. If the component base is an image, it will copy the image.</p>
+<p>Due to the browser environment, you can only copy one item at a time as most browsers don't support copying multiple elements. Furthermore, due to security in the browser, you may be asked for permission to allow the editor to use your external clipboard.</p>
+<p>Furthermore, in GDS Editor, external copy and paste is a separate mechanism compared to internal application-specific duplicating, copying, and pasting. Use <span class="hotKey">Alt + V</span> to paste and <span class="hotKey">Alt + C</span> to copy a component. More work is anticipated to improve the use of the external keyboard.</p>
+
+<p class="header">PNG and JPEG editing</p>
+<p>GDS Editor now supports the editing of PNG and JPEG files, allowing you to incorporate and modify PNGs and JPEGs from other sources. PNG and BMP filters can also be added to SVG sources, increasing the modification capacity of GDS Editor. PNG and JPEG editing does not have the power and flexibility of GDS Plus art objects. However, the filter functions editor will allow you to perform some basic image modification tasks. Available filters are:</p>
+<ul>
+    <li>Hue - rotate the hue of the image (raster only).</li>
+    <li>Saturation - adjust the saturation of an image (raster only).</li>
+    <li>Luminance - adjust the luminance of an image (raster only).</li>
+    <li>Contrast - intensify images both raster and SVG.</li>
+    <li>Pixelate - convert vector art to pixel art.</li>
+    <li>Blur - useful for creating drop shadows on components.</li>
+    <li>Brightness - adjust light value for getting assets to sit with your environment.</li>
+    <li>Reduce antialias - reduces alpha pixels on edges depending on the threshold.</li>
+</ul>
+
+<p class="header">New Google Fonts in the drop-down list</p>
+<p>As Google Fonts are open source fonts and free to use in your games, I've gone through the font library and selected some of the best-suited fonts for use in your games. However, you can always upload a font. The new fonts are as follows:</p>
+<ul>
+    <li>Three new color sliders for SVG art components - contrast, hue shift, and color blends.</li>
+    <li>Dropper tool now approximates art component colors.</li>
+</ul>
+<p class="warning">Please be aware that changing HSL after applying contrast, blend, and shift will remove these filters.</p>
+
+<h1>Bug fixes</h1>
+<ul>
+	<li>[1.4.2] fixed SCML component opening svg dialogs in inspector</li>
+	<li>[1.4.2] fixed working dialog centering</li>
+	<li>[1.4.2] fixed a z-order bug when dragging scenes into a new scene. there are still some misses on z-order when loading scenes.</li>
+    <li>Fixed grid active/inactive toggles to reflect the current grid state.</li>
+    <li>Fixed color group window not opening when selecting components with an already open window.</li>
+    <li>Fixed bug with component locking; components became unlocked when using the tool.</li>
+    <li>Locked components cannot be selected with the rubber band tool.</li>
+    <li>Fixed SCML component export always detecting SCML in scene.</li>
+    <li>Fixed export JSON data for exporting atlases.</li>
+    <li>Fixed a bug when undoing color swaps on strokes.</li>
+    <li>Some spelling mistakes fixed (spelling mistakes are a trademark of all GDS services; yes, that was deliberate :)).</li>
+    <li>Fixed bug; the editor wasn't creating a new scene when importing into a project without scenes.</li>
+    <li>Fixed font upload bug; custom fonts could not be uploaded.</li>
+    <li>Changes to art objects are also reflected in the scene palette thumbnail.</li>
+    <li>Fixed SVG export not exporting color changes.</li>
+    <li>Fixed UI bug; components in the scene appearing next to the scene dialog could not be selected.</li>
+</ul>
+
+<h1>Performance updates</h1>
+<ul>
+    <li>Icons have been placed on a single texture sheet, reducing requests and load times.</li>
+    <li>Improvements in speed when selecting large numbers of components.</li>
+</ul>
+	
+	
