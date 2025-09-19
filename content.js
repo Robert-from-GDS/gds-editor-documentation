@@ -4,49 +4,49 @@ const GDS_DOCS_contents={
     structure:[
 		{
 		 type:"page",
-		 id:"INTRO",
+		 id:"introduction",
 		 name:"Introduction",
 		 htmlContentRef:GDS_page_locationRoot+"pages/intro.html",
 		},
 		{
 		 type:"page",
-		 id:"MINREQ",
+		 id:"gds-editor-minimum-requirements",
 		 name:"Minimum system requirements",
 		 htmlContentRef:GDS_page_locationRoot+"pages/minimum-requirements.html",
 		},
 		{
 		 type:"page",
-		 id:"KNOWNISSUES",
+		 id:"known-issues",
 		 name:"Known issues",
 		 htmlContentRef:GDS_page_locationRoot+"pages/known-issues.html",
 		},
 		{
 		 type:"page",
-		 id:"QUICKSTART",
+		 id:"quick-start",
 		 name:"Quick start guide",
 		 htmlContentRef:GDS_page_locationRoot+"pages/quick-start.html",
 		},
 		{
 		 type:"page",
-		 id:"MOUSECTRLS",
+		 id:"mouse-controls",
 		 name:"Mouse controls and selecting",
 		 htmlContentRef:GDS_page_locationRoot+"pages/mouse-controls.html",
 		},
 		{
 		 type:"page",
-		 id:"HOTKEYTABLE",
+		 id:"hotkeys-and-shortcuts",
 		 name:"hotkey look up",
 		 htmlContentRef:GDS_page_locationRoot+"pages/hotkeys.html",
 		},
 		{
 		 type:"page",
-		 id:"Layout",
+		 id:"gds-editor-layout",
 		 name:"Gds Editor layout",
 		 htmlContentRef:GDS_page_locationRoot+"pages/layout.html",
 		},
 		{
 		 type:"category",
-		 id:"SCENE",
+		 id:"the-gds-editor-scene",
 		 name:"The GDS editor Scene",
 		 contents:[
 				 {type:"page" , name:"The GDS editor Scene", id:"SCENINTRO", htmlContentRef:GDS_page_locationRoot+"pages/scene-intro.html"}, //index page
@@ -62,7 +62,7 @@ const GDS_DOCS_contents={
 		},
 		{
 		 type:"category",
-		 id:"COMPONENTS",
+		 id:"gds-editor-components",
 		 name:"Components",
 		 contents:[
 				 {type:"page" , name:"Component types", id:"COMPOS", htmlContentRef:GDS_page_locationRoot+"pages/components-intro.html"}, //index page
@@ -96,20 +96,20 @@ const GDS_DOCS_contents={
 		 id:"SLICING",
 		 name:"Component slicing",
 		 contents:[
-				 {type:"page" , name:"Slicing introduction", id:"", htmlContentRef:GDS_page_locationRoot+"pages/slicing-intro.html"}, //index page
-		         {type:"page" , name:"nine slicing and three slicing", id:"9N3Sl", htmlContentRef:GDS_page_locationRoot+"pages/nine-slicing-and-three-slicing.html"},
-				 {type:"page" , name:"grid slicing", id:"GRIDSLICING", htmlContentRef:GDS_page_locationRoot+"pages/grid-slicing.html"},
+				 {type:"page" , name:"Slicing introduction", id:"slicing-introduction", htmlContentRef:GDS_page_locationRoot+"pages/slicing-intro.html"}, //index page
+		         {type:"page" , name:"nine slicing and three slicing", id:"nine-and-three-slicing", htmlContentRef:GDS_page_locationRoot+"pages/nine-slicing-and-three-slicing.html"},
+				 {type:"page" , name:"grid slicing", id:"grid-slicing", htmlContentRef:GDS_page_locationRoot+"pages/grid-slicing.html"},
 				]
 		},
 		{
 		 type:"page",
-		 id:"GDSSETTINGS",
+		 id:"gds-editor-settings",
 		 name:"GDS editor settings",
 		 htmlContentRef:GDS_page_locationRoot+"pages/gdse-settings.html",
 		},
 		{
 		 type:"page",
-		 id:"CHANGELOG",
+		 id:"change-log",
 		 name:"Version change log",
 		 htmlContentRef:GDS_page_locationRoot+"pages/change-log.html",
 		},

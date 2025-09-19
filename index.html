@@ -15,7 +15,16 @@
 	</body>
 </html>
 <script>
-window.onload = (event) => {
-		buildGDSEDocs();
+	 window.onload = (event) => {
+		buildGDSEDocs("pageWrapper");
+		//was a page id in the URL
+		var pageParams = new URLSearchParams(window.location.search);
+		if (pageParams.has('page')){
+			var pageId=pageParams.get('page');
+			var pageRef=findDocById(pageId).htmlContentRef;
+			if(pageRef !==false){
+				loadInContent(pageRef,pageId);
+			}
+		}
 	};
 </script>

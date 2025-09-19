@@ -1,14 +1,13 @@
-var navBar;// html dom element - inject constructed list here- 
-var contentContainer;// html dom element - inject fetched pages here
+var navBar;
+var contentContainer;
 var lastPageViewed=null;// stores an id of the last page looked at
 var next=null;//holds link to next itemID
 var previous=null;//holds link to previous item in list
-var flatList=[];// create a flat list for easy retreival and index determination
-var nextButton=null; // html dom element 
-var previousButton=null; // html dom element 
+var flatList=[];
+var nextButton=null;
+var previousButton=null;
 
-/*--Flattening-----------------------------------------------------------------||*/
-//called on build after page load
+/*Flattening-----------------------------------------------------------------||*/
 function flattenDocsStructure(){
 	flatList.length=0;
 	for(let i=0; i < GDS_DOCS_contents.structure.length; i++){
@@ -33,7 +32,7 @@ function flattenCategoryItems(category){
 		}
 	}
 }
-/*------------END FALETTING------------------*/
+/*----------END FALETTING------------------*/
 
 
 
@@ -107,11 +106,16 @@ function buildPageLi(item){
 
 
 
+//Nav bar content--||
+
+
 function buildContentDisplay(){
 	contentContainer=document.createElement("div");
 	contentContainer.id="GDScontentContainer";
 	return contentContainer;
 }
+
+
 
 
 
@@ -129,6 +133,9 @@ function buildNextAndPreviousButtons(){
 	previousButton.id="previousButton";
 	previousButton.innerHTML="previous page";
 }
+
+
+
 
 
 
@@ -174,6 +181,7 @@ function docLink(id){
 	let doc=findDocById(id);
 	if(doc){
 		loadInContent(doc.htmlContentRef, doc.id);
+		scrollToTop();
 	}
 	else{
 		console.error("document not found");
@@ -216,6 +224,7 @@ function loadInContent(ref,id){
 			contentContainer.innerHTML = html;
 			setPagination(id);
 			setNavBarHighlight(id);
+			setHistory(id);
 		  })
 		  .catch(err => {
 			contentContainer.innerHTML = `<div class="error">Error loading content: ${err.message}</div>`;
@@ -258,7 +267,12 @@ function setNavBarHighlight(id) {
   }
 }
 
+function setHistory(pageId){
+	// Update the URL without reloading
+    const newUrl = `${window.location.pathname}?page=${pageId}`;
+    window.history.pushState({ pageId }, '', newUrl);
 
+}
 
 function scrollToTop(){
 	window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -269,15 +283,14 @@ function scrollToTop(){
 
 
 //Build the navigation bar and inject it into the page on the right side
-function buildGDSEDocs(){
-	let pageWrapper=document.getElementById("pageWrapper");
+function buildGDSEDocs(injectIntoDomId){
+	let pageWrapper=document.getElementById(injectIntoDomId);
 		pageWrapper.append(buildNavBar());
 		pageWrapper.append(buildContentDisplay());
-		loadInContent(GDS_DOCS_contents.structure[0].htmlContentRef, "INTRO");
+		loadInContent(GDS_DOCS_contents.structure[0].htmlContentRef, "introduction");
 		flattenDocsStructure();
 		buildNextAndPreviousButtons();
 }
-
 
 
 
