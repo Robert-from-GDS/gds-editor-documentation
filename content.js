@@ -1,5 +1,5 @@
-const GDS_page_locationRoot="https://robert-from-gds.github.io/gds-editor-documentation/";
-//const GDS_page_locationRoot="";
+//const GDS_page_locationRoot="https://robert-from-gds.github.io/gds-editor-documentation/";
+const GDS_page_locationRoot="";
 const GDS_DOCS_contents={
     name:"mainNavBar",
     structure:[

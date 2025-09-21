@@ -7,6 +7,7 @@ var flatList=[];
 var nextButton=null;
 var previousButton=null;
 var dropDownsActive=false;
+var galleryViewer=document.createElement("div");
 
 /*Flattening-----------------------------------------------------------------||*/
 function flattenDocsStructure(){
@@ -137,12 +138,41 @@ function buildNextAndPreviousButtons(){
 }
 
 
-
+function buildGalleryViewer(){
+	galleryViewer.style.cssText="background:rgba(0,0,0,0.50); padding-top:3em; position:fixed; top:0px; left:0px; z-index:1000; height:100%; width:100%; display:block; text-align:center;";
+    galleryViewer.onclick=function(){closeImgLink();};
+	galleryViewer.onmouseup=function(){closeImgLink();};
+}
 
 
 
 
 //*-------------------------------------------------------------------------------INTERFACE INTERACTION---------------||
+
+
+
+function imgLink(imgSrc){
+	console.log("called");
+
+	let img=new Image();
+		img.src=imgSrc;
+		img.alt="";
+		img.style="max-width:1200px";
+	    galleryViewer.append(img);
+	    document.body.appendChild(galleryViewer);
+}
+
+function closeImgLink(){
+	 galleryViewer.innerHTML="";
+	 galleryViewer.remove();
+}
+
+
+
+
+
+
+
 function receiveNaveBarClick(e){
 		if(! e.target){return false;}
 		if(! e.target.dataset){return false;}
@@ -298,6 +328,7 @@ function buildGDSEDocs(injectIntoDomId){
 		loadInContent(GDS_DOCS_contents.structure[0].htmlContentRef, "introduction");
 		flattenDocsStructure();
 		buildNextAndPreviousButtons();
+		buildGalleryViewer();
 }
 
 
