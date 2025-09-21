@@ -27,8 +27,8 @@ div.navBarCategoryHolder{}
 div#GDScontentContainer h1{text-align:left;}
 div#GDScontentContainer h2{text-align:left;}
 div#GDScontentContainer p{font-size:1em; line-height:1.5em; text-align:left;}
-div#GDScontentContainer p.title{font-size:1.3em;font-weight:900;}
-div#GDScontentContainer p.subTitle{font-size:1.1em;font-weight:700;}
+div#GDScontentContainer p.title{font-size:1.3em;font-weight:700;}
+div#GDScontentContainer p.subTitle{font-size:1.1em;font-weight:500;}
 div#GDScontentContainer .tip{padding:.8em;border-radius:7px; background-color:#c9ffff; border:2px dashed #62deff; margin:1em 0em; font-size:1em;}
 div#GDScontentContainer .warning{padding:.8em;border-radius:7px; background-color:#fffabe; border:2px dashed #ffd42a; margin:1em 0em;font-size:1em;}
 div#GDScontentContainer .important{padding:.8em;border-radius:7px; background-color:#ffcbcb; border:2px dashed #ff5c5c; margin:1em 0em;font-size:1em;}
@@ -49,4 +49,5 @@ div#previousButton{margin-right:2em; padding:2em; border:1px solid #79e1e1;borde
 .navHover:hover{background:#79e1e1;}
 .hotkey{padding:.3em; border:1px solid #009ebb;border-radius:5px; background-color:#d7fdfd; color:#005777}
 .docLink{padding:.3em; border:1px solid #009ebb;border-radius:5px; background-color:#79e1e1; color:#005777; cursor:pointer;}
+
 .space{height:3em;}
