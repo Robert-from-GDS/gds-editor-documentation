@@ -139,13 +139,19 @@ function buildNextAndPreviousButtons(){
 
 
 function buildGalleryViewer(){
-	galleryViewer.style.cssText="background:rgba(0,0,0,0.50); padding-top:3em; position:fixed; top:0px; left:0px; z-index:1000; height:100%; width:100%; display:block; text-align:center;";
+	galleryViewer.style.cssText="background:rgba(0,0,0,0.85);position:fixed;align-items: center;   justify-content: center;    top:0px; left:0px; z-index:1000; height:100%; width:100%; display:flex; text-align:center;";
     galleryViewer.onclick=function(){closeImgLink();};
 	galleryViewer.onmouseup=function(){closeImgLink();};
 }
 
 
 
+//scan newly appended content and check if it has anything we need to manipulate
+function scanNewContent(){
+	
+	
+	
+}
 
 //*-------------------------------------------------------------------------------INTERFACE INTERACTION---------------||
 
@@ -157,7 +163,7 @@ function imgLink(imgSrc){
 	let img=new Image();
 		img.src=imgSrc;
 		img.alt="";
-		img.style="max-width:1200px";
+		img.style="max-width:1200px; border:5px solid #ffffff; border-radius:5px;max-height:700px;";
 	    galleryViewer.append(img);
 	    document.body.appendChild(galleryViewer);
 }
