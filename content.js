@@ -1,5 +1,5 @@
 const GDS_page_locationRoot="https://robert-from-gds.github.io/gds-editor-documentation/";
-
+//const GDS_page_locationRoot="";
 const GDS_DOCS_contents={
     name:"mainNavBar",
     structure:[
@@ -21,12 +21,12 @@ const GDS_DOCS_contents={
 		 name:"Known issues",
 		 htmlContentRef:GDS_page_locationRoot+"pages/known-issues.html",
 		},
-		{
+		/*{
 		 type:"page",
 		 id:"quick-start",
 		 name:"Quick start guide",
 		 htmlContentRef:GDS_page_locationRoot+"pages/quick-start.html",
-		},
+		},*/
 		{
 		 type:"page",
 		 id:"mouse-controls",
@@ -51,7 +51,9 @@ const GDS_DOCS_contents={
 		 name:"The GDS editor Scene",
 		 contents:[
 				 {type:"page" , name:"The GDS editor Scene", id:"scene-intro", htmlContentRef:GDS_page_locationRoot+"pages/scene-intro.html"}, //index page
-				 {type:"page" , name:"Creating a new scene", id:"createing-new-scene", htmlContentRef:GDS_page_locationRoot+"pages/creating-new-scene.html"},
+				 {type:"page" , name:"Creating a new scene", id:"creating-new-scene", htmlContentRef:GDS_page_locationRoot+"pages/creating-new-scene.html"},
+				 {type:"page" , name:"Loading a scene", id:"loading-a-scene", htmlContentRef:GDS_page_locationRoot+"pages/loading-a-scene.html"},
+				 {type:"page" , name:"Saving a scene", id:"saving-a-scene", htmlContentRef:GDS_page_locationRoot+"pages/saving-a-scene.html"},
 				 {type:"page" , name:"Navegating a new scene", id:"navegating-a-scene", htmlContentRef:GDS_page_locationRoot+"pages/navegating-scene.html"},
 				 {type:"page" , name:"Adding components to your scene", id:"adding-components", htmlContentRef:GDS_page_locationRoot+"pages/adding-components.html"},
 		         {type:"page" , name:"The Scene Palette", id:"scene-palette", htmlContentRef:GDS_page_locationRoot+"pages/scene-palette.html"},
@@ -66,14 +68,14 @@ const GDS_DOCS_contents={
 		 id:"gds-editor-components",
 		 name:"Components",
 		 contents:[
-				 {type:"page" , name:"Component types", id:"COMPOS", htmlContentRef:GDS_page_locationRoot+"pages/components-intro.html"}, //index page
-		         {type:"page" , name:"GDS art object", id:"GDSAO", htmlContentRef:GDS_page_locationRoot+"pages/gds-art-object.html"},
-				 {type:"page" , name:"Bitmap images", id:"BITMAPS", htmlContentRef:GDS_page_locationRoot+"pages/bitmap-components.html"},
-				 {type:"page" , name:"Simple shapes", id:"SHAPES", htmlContentRef:GDS_page_locationRoot+"pages/shapes.html"},
-				 {type:"page" , name:"Brush strokes", id:"BRUSESTROKES", htmlContentRef:GDS_page_locationRoot+"pages/brush-strokes.html"},
-				 {type:"page" , name:"Simple text", id:"SIMPLETEXT", htmlContentRef:GDS_page_locationRoot+"pages/text-component.html"},
-				 {type:"page" , name:"panels", id:"PANELS", htmlContentRef:GDS_page_locationRoot+"pages/panel-components.html"},
-				 {type:"page" , name:"Texture backgrounds", id:"TEXTUREBG", htmlContentRef:GDS_page_locationRoot+"pages/texture-backgrounds.html"},
+				 {type:"page" , name:"Component types", id:"components-intro", htmlContentRef:GDS_page_locationRoot+"pages/components-intro.html"}, //index page
+		         {type:"page" , name:"GDS art object", id:"gds-art-objects", htmlContentRef:GDS_page_locationRoot+"pages/gds-art-object.html"},
+				 {type:"page" , name:"Bitmap images", id:"bitmap-components", htmlContentRef:GDS_page_locationRoot+"pages/bitmap-components.html"},
+				 {type:"page" , name:"Simple shapes", id:"shapes", htmlContentRef:GDS_page_locationRoot+"pages/shapes.html"},
+				 {type:"page" , name:"Brush strokes", id:"brush-strokes", htmlContentRef:GDS_page_locationRoot+"pages/brush-strokes.html"},
+				 {type:"page" , name:"Simple text", id:"simple-text", htmlContentRef:GDS_page_locationRoot+"pages/text-component.html"},
+				 {type:"page" , name:"panels", id:"panel-based-components", htmlContentRef:GDS_page_locationRoot+"pages/panel-components.html"},
+				 {type:"page" , name:"Texture backgrounds", id:"texture-backgrounds", htmlContentRef:GDS_page_locationRoot+"pages/texture-backgrounds.html"},
 				 
 				]
 		},
