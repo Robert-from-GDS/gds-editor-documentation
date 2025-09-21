@@ -82,7 +82,7 @@ function buildCategoryLi(item){
 	var catDD=document.createElement("div");
 		catDD.classList.add("navBarCategoryDropDown");
 		catDD.id="dropDown"+item.id;
-		catDD.style.display="none";
+		catDD.style.display="block";
 		catBox.append(catDD);
 		for (let i=1; i < item.contents.length; i++){
 			let li=buildPageLi(item.contents[i]);
@@ -291,6 +291,7 @@ function buildGDSEDocs(injectIntoDomId){
 		flattenDocsStructure();
 		buildNextAndPreviousButtons();
 }
+
 
 
 
