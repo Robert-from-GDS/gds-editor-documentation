@@ -6,6 +6,7 @@ var previous=null;//holds link to previous item in list
 var flatList=[];
 var nextButton=null;
 var previousButton=null;
+var dropDownsActive=false;
 
 /*Flattening-----------------------------------------------------------------||*/
 function flattenDocsStructure(){
@@ -82,7 +83,8 @@ function buildCategoryLi(item){
 	var catDD=document.createElement("div");
 		catDD.classList.add("navBarCategoryDropDown");
 		catDD.id="dropDown"+item.id;
-		catDD.style.display="block";
+		if(dropDownsActive){catDD.style.display="none";}
+		else{catDD.style.display="block";}
 		catBox.append(catDD);
 		for (let i=1; i < item.contents.length; i++){
 			let li=buildPageLi(item.contents[i]);
@@ -148,14 +150,19 @@ function receiveNaveBarClick(e){
 		
 		loadInContent(e.target.dataset.contentRef,e.target.dataset.code);
 		//if this is a CATHEADER then we should expand the category and not scroll the page to the top
-		if(e.target.dataset.type){
-			if(e.target.dataset.type==="CATHEADER"){
-				catCode=e.target.dataset.catCode;
-				toggleCategoryDropDown(catCode);
+		if(dropDownsActive){
+			if(e.target.dataset.type){
+				if(e.target.dataset.type==="CATHEADER"){
+					catCode=e.target.dataset.catCode;
+					toggleCategoryDropDown(catCode);
+				}
+				else{
+					scrollToTop();
+				}
 			}
-			else{
+		}
+		else{
 			scrollToTop();
-			}
 		}
 	}
 	
@@ -164,6 +171,7 @@ function receiveNaveBarClick(e){
 	
 
 function toggleCategoryDropDown(id){
+	if(dropDownsActive===false){return false;}
 	let element=document.getElementById("dropDown"+id);
 	if(element.style.display==="none"){
 		element.style.display="block"
@@ -291,7 +299,6 @@ function buildGDSEDocs(injectIntoDomId){
 		flattenDocsStructure();
 		buildNextAndPreviousButtons();
 }
-
 
 
 

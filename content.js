@@ -54,7 +54,6 @@ const GDS_DOCS_contents={
 				 {type:"page" , name:"Creating a new scene", id:"creating-new-scene", htmlContentRef:GDS_page_locationRoot+"pages/creating-new-scene.html"},
 				 {type:"page" , name:"Loading a scene", id:"loading-a-scene", htmlContentRef:GDS_page_locationRoot+"pages/loading-a-scene.html"},
 				 {type:"page" , name:"Saving a scene", id:"saving-a-scene", htmlContentRef:GDS_page_locationRoot+"pages/saving-a-scene.html"},
-				 {type:"page" , name:"Navegating a new scene", id:"navegating-a-scene", htmlContentRef:GDS_page_locationRoot+"pages/navegating-scene.html"},
 				 {type:"page" , name:"Adding components to your scene", id:"adding-components", htmlContentRef:GDS_page_locationRoot+"pages/adding-components.html"},
 		         {type:"page" , name:"The Scene Palette", id:"scene-palette", htmlContentRef:GDS_page_locationRoot+"pages/scene-palette.html"},
 				 {type:"page" , name:"Scene Categories", id:"scene-categories", htmlContentRef:GDS_page_locationRoot+"pages/scene-categories.html"},
