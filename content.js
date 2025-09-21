@@ -1,4 +1,4 @@
-const GDS_page_locationRoot="";
+const GDS_page_locationRoot="https://robert-from-gds.github.io/gds-editor-documentation/";
 const GDS_DOCS_contents={
     name:"mainNavBar",
     structure:[
@@ -65,14 +65,14 @@ const GDS_DOCS_contents={
 		 id:"gds-editor-components",
 		 name:"Components",
 		 contents:[
-				 {type:"page" , name:"Component types", id:"components-intro", htmlContentRef:GDS_page_locationRoot+"pages/components-intro.html"}, //index page
-		         {type:"page" , name:"GDS art object", id:"art-objects", htmlContentRef:GDS_page_locationRoot+"pages/gds-art-object.html"},
-				 {type:"page" , name:"Bitmap images", id:"bitmaps-raster-components", htmlContentRef:GDS_page_locationRoot+"pages/bitmap-components.html"},
-				 {type:"page" , name:"Simple shapes", id:"shapes-and-paths", htmlContentRef:GDS_page_locationRoot+"pages/shapes.html"},
-				 {type:"page" , name:"Brush strokes", id:"brush-strokes", htmlContentRef:GDS_page_locationRoot+"pages/brush-strokes.html"},
-				 {type:"page" , name:"Simple text", id:"simple-text", htmlContentRef:GDS_page_locationRoot+"pages/text-component.html"},
-				 {type:"page" , name:"panels", id:"panels", htmlContentRef:GDS_page_locationRoot+"pages/panel-components.html"},
-				 {type:"page" , name:"Texture backgrounds", id:"texture-backgrounds", htmlContentRef:GDS_page_locationRoot+"pages/texture-backgrounds.html"},
+				 {type:"page" , name:"Component types", id:"COMPOS", htmlContentRef:GDS_page_locationRoot+"pages/components-intro.html"}, //index page
+		         {type:"page" , name:"GDS art object", id:"GDSAO", htmlContentRef:GDS_page_locationRoot+"pages/gds-art-object.html"},
+				 {type:"page" , name:"Bitmap images", id:"BITMAPS", htmlContentRef:GDS_page_locationRoot+"pages/bitmap-components.html"},
+				 {type:"page" , name:"Simple shapes", id:"SHAPES", htmlContentRef:GDS_page_locationRoot+"pages/shapes.html"},
+				 {type:"page" , name:"Brush strokes", id:"BRUSESTROKES", htmlContentRef:GDS_page_locationRoot+"pages/brush-strokes.html"},
+				 {type:"page" , name:"Simple text", id:"SIMPLETEXT", htmlContentRef:GDS_page_locationRoot+"pages/text-component.html"},
+				 {type:"page" , name:"panels", id:"PANELS", htmlContentRef:GDS_page_locationRoot+"pages/panel-components.html"},
+				 {type:"page" , name:"Texture backgrounds", id:"TEXTUREBG", htmlContentRef:GDS_page_locationRoot+"pages/texture-backgrounds.html"},
 				 
 				]
 		},
@@ -114,7 +114,6 @@ const GDS_DOCS_contents={
 		 htmlContentRef:GDS_page_locationRoot+"pages/change-log.html",
 		},
 	]
-
 
 
 };
