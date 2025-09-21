@@ -1,4 +1,24 @@
-<h1>The GDS editor Scene</h1>
-<div class="warning">
-  ⚠️ This section is a stub and awaiting completion. Apologies for the inconvenience. I'm slowly but steadily starting to write out the documents
+<h1>The GDS Editor Scene</h1>
+
+<p>In GDS Editor, a scene is an isolated workspace where you build your designs. A scene holds all the components you add or create, as well as supporting tools such as grids, guides, scene settings, and undo history.</p>
+
+<div class="tip">
+  <p>💾 Scenes are the core unit of work in GDS Editor — when you save your project, you are saving the scene. Currently, GDS Editor does not support saving multiple scenes as a group. Each scene is treated as a separate project and must be saved individually.</p>
 </div>
+
+<p class="subTitle">📐 Scene Area and Dimensions</p>
+<p>Each scene includes a <strong>scene area</strong>, which serves as the origin and main focus for your work. The scene area is defined in pixel dimensions. You can set it when creating a new scene and change it at any time during your workflow. The default scene area is <strong>1920 × 1080 pixels</strong>.</p>
+<p>Components may be positioned outside the scene area, but the scene area remains the reference point for layout and export. Use the scene area when designing mockups for target screen sizes or image dimensions.</p>
+<p> The <em>Scene Export</em> feature produces a final, flattened image based on the scene area’s dimensions.</p>
+
+<p class="subTitle">🛠️ Intended Uses</p>
+<p> Scenes help you keep your work organised and make it easy to work on isolated compositions. They can also serve other purposes:</p>
+<ul>
+  <li><strong>Isolated compositions:</strong> Keep separate ideas or variations in their own scenes.</li>
+  <li><strong>Batching components:</strong> Move groups of components into a new scene to treat them as a grouped item for easier editing.</li>
+  <li><strong>Fast workflows:</strong> Create and delete scenes instantly — scenes are stored in memory while the app is open, so there are no loading delays.</li>
+  <li><strong>Cleaner main scene:</strong> Use additional scenes to load separate batches of components and keep your primary scene uncluttered.</li>
+  <li><strong>Component interaction:</strong> Copy and paste components between scenes for quick, easy management.</li>
+</ul>
+
+<p>📖 For a detailed overview of the scene layout, check out the <small class="docLink" onclick="docLink('gds-editor-layout')">layout guide</small>.</p>
