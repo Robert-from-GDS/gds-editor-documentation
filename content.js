@@ -1,4 +1,5 @@
 const GDS_page_locationRoot="https://robert-from-gds.github.io/gds-editor-documentation/";
+
 const GDS_DOCS_contents={
     name:"mainNavBar",
     structure:[
@@ -49,15 +50,15 @@ const GDS_DOCS_contents={
 		 id:"the-gds-editor-scene",
 		 name:"The GDS editor Scene",
 		 contents:[
-				 {type:"page" , name:"The GDS editor Scene", id:"SCENINTRO", htmlContentRef:GDS_page_locationRoot+"pages/scene-intro.html"}, //index page
-				 {type:"page" , name:"Creating a new scene", id:"CREATINGNEWSCENE", htmlContentRef:GDS_page_locationRoot+"pages/creating-new-scene.html"},
-				 {type:"page" , name:"Navegating a new scene", id:"NAVEGATINGSCENE", htmlContentRef:GDS_page_locationRoot+"pages/navegating-scene.html"},
-				 {type:"page" , name:"Adding components to your scene", id:"ADDINGCOMPONETS", htmlContentRef:GDS_page_locationRoot+"pages/adding-components.html"},
-		         {type:"page" , name:"The Scene Palette", id:"SCENEPALETTE", htmlContentRef:GDS_page_locationRoot+"pages/scene-palette.html"},
-				 {type:"page" , name:"Scene Categories", id:"SCENECATS", htmlContentRef:GDS_page_locationRoot+"pages/scene-categories.html"},
-				 {type:"page" , name:"Category operations", id:"CATOPS", htmlContentRef:GDS_page_locationRoot+"pages/category-operations.html"},
-				 {type:"page" , name:"Scene settings", id:"SCENESETTINGS", htmlContentRef:GDS_page_locationRoot+"pages/scene-settings.html"},
-				 {type:"page" , name:"The scene list", id:"SCENELIST", htmlContentRef:GDS_page_locationRoot+"pages/the_scene_list.html"},
+				 {type:"page" , name:"The GDS editor Scene", id:"scene-intro", htmlContentRef:GDS_page_locationRoot+"pages/scene-intro.html"}, //index page
+				 {type:"page" , name:"Creating a new scene", id:"createing-new-scene", htmlContentRef:GDS_page_locationRoot+"pages/creating-new-scene.html"},
+				 {type:"page" , name:"Navegating a new scene", id:"navegating-a-scene", htmlContentRef:GDS_page_locationRoot+"pages/navegating-scene.html"},
+				 {type:"page" , name:"Adding components to your scene", id:"adding-components", htmlContentRef:GDS_page_locationRoot+"pages/adding-components.html"},
+		         {type:"page" , name:"The Scene Palette", id:"scene-palette", htmlContentRef:GDS_page_locationRoot+"pages/scene-palette.html"},
+				 {type:"page" , name:"Scene Categories", id:"scene-categories", htmlContentRef:GDS_page_locationRoot+"pages/scene-categories.html"},
+				 {type:"page" , name:"Category operations", id:"category-options", htmlContentRef:GDS_page_locationRoot+"pages/category-operations.html"},
+				 {type:"page" , name:"Scene settings", id:"scene-settings", htmlContentRef:GDS_page_locationRoot+"pages/scene-settings.html"},
+				 {type:"page" , name:"The scene list", id:"the-scene-list", htmlContentRef:GDS_page_locationRoot+"pages/the_scene_list.html"},
 				]
 		},
 		{
