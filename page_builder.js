@@ -7,7 +7,11 @@ var flatList=[];
 var nextButton=null;
 var previousButton=null;
 var dropDownsActive=false;
+var container=null;
 var galleryViewer=document.createElement("div");
+var navOpener=null;
+var navCloser=null;
+var smallScreen=false;
 
 /*Flattening-----------------------------------------------------------------||*/
 function flattenDocsStructure(){
@@ -59,9 +63,32 @@ function buildNavBar(){
 		}
 		if (html) navBar.append(html);
 	}
-	
+	buildNavOpener();
+	buildNavHider();
 	return navBar;
 }
+
+
+
+
+function buildNavOpener(){
+	navOpener=document.createElement("div");
+	navOpener.id="navOpener";
+	navOpener.onclick=function(){openNavBar();}
+	navOpenerIcon=new Image();
+	navOpenerIcon.src="https://gamedeveloperstudiogeneralresources.b-cdn.net/images/side_bar_icons/assets_dark.png";
+	navOpener.append(navOpenerIcon);
+}
+
+
+function buildNavHider(){
+	navCloser=document.createElement("button");
+	navCloser.onclick=function(){closeNavBar();};
+}
+
+
+
+
 
 // builds a nav bar meu item entry for a category
 function buildCategoryLi(item){
@@ -153,6 +180,31 @@ function scanNewContent(){
 	
 }
 
+
+function setForMobile(){
+	smallScreen=true;
+	closeNavBar();
+	contentContainer.style.width="95%";
+	navBar.style.width="95%";
+	navBar.style.position="fixed";
+	navBar.style.zIndex=499;
+	navBar.style.top="150px";
+	navBar.style.left="0px";
+	navBar.style.display="block";
+}
+
+
+
+function setForDeskTop(){
+	smallScreen=false;
+	contentContainer.style.width="95%";
+	navBar.style.width="95%";
+	navBar.style.position="relative";
+	navBar.style.zIndex=499;
+	navBar.style.display="inline-block";
+	openNavBar();
+}
+
 //*-------------------------------------------------------------------------------INTERFACE INTERACTION---------------||
 
 
@@ -168,15 +220,23 @@ function imgLink(imgSrc){
 	    document.body.appendChild(galleryViewer);
 }
 
+
+
 function closeImgLink(){
 	 galleryViewer.innerHTML="";
 	 galleryViewer.remove();
 }
 
 
+function closeNavBar(){
+	navBar.remove();
+	container.append(navOpener);
+}
 
-
-
+function openNavBar(){
+	navOpener.remove();
+	container.prepend(navBar);
+}
 
 
 function receiveNaveBarClick(e){
@@ -266,6 +326,7 @@ function loadInContent(ref,id){
 		  })
 		  .then(html => {
 			contentContainer.innerHTML = html;
+			 if(smallScreen){closeNavBar();}
 			setPagination(id);
 			setNavBarHighlight(id);
 			setHistory(id);
@@ -309,6 +370,7 @@ function setNavBarHighlight(id) {
       children[i].style.backgroundColor = "transparent";
     }
   }
+ 
 }
 
 function setHistory(pageId){
@@ -328,13 +390,18 @@ function scrollToTop(){
 
 //Build the navigation bar and inject it into the page on the right side
 function buildGDSEDocs(injectIntoDomId){
-	let pageWrapper=document.getElementById(injectIntoDomId);
-		pageWrapper.append(buildNavBar());
-		pageWrapper.append(buildContentDisplay());
+	    container=document.getElementById(injectIntoDomId);
+		container.append(buildNavBar());
+		container.append(buildContentDisplay());
 		loadInContent(GDS_DOCS_contents.structure[0].htmlContentRef, "introduction");
 		flattenDocsStructure();
 		buildNextAndPreviousButtons();
 		buildGalleryViewer();
+		//refector depedning on window width
+		 const width = window.innerWidth;
+		if(width < 900){
+			setForMobile();
+		}
 }
 
 
