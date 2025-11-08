@@ -1,0 +1,132 @@
+<!--
+<p class="subTitle"></p>
+<div class="tip"></div>
+<div class="warning"></div>
+
+-->
+
+
+
+
+<h1>Levels Editor</h1>
+<p class="subTitle">The Levels Editor</p>
+ <p>
+   The Levels editor remaps pixel brightness values to change contrast, shadows, midtones and highlights.
+   It lets you set input black/white (which clip existing values), adjust the gamma (midtones), and set output black/white (final remapped range).
+   This is a fast and powerful way to improve image contrast, fix exposure and do basic color corrections.
+ </p>
+<div class="warning">Levels operates on pixel data — it edits the raster representation of an image. Using levels on vector based components will not bake in color changes to the underlying xml. Levels is available to use on vecotrs but will not be carried into the vetor data when exporting SVG data.</div>
+
+
+ <p class="subTitle">How to open the Levels Editor</p>
+      <p>The Levels dialog becomes available from the component inspector options panel on the right side of the workspace when a single image component is selected. 
+	  <small class="imgLink" onmousedown="imgLink('https://gds-editor.b-cdn.net/docs/image/general_layout.png')"> component inspector #10 </small> </p>
+	<p>Once open you can start editing the highlights and shadows of your selected component via the <small class="imgLink" onmousedown="imgLink('https://gds-editor.b-cdn.net/docs/image/levels-layout.png')"> levels dialog </small>
+</p>
+
+      
+
+
+
+
+
+<p class="subTitle"> Slider descriptions — what each control does</p>
+
+<div class="grid">
+  <div>
+    <h3>Input controls</h3>
+    <table>
+      <tr><th>Black Input</th><td>Sets the darkest input value. Pixels below this become pure black — increases shadow contrast.</td></tr>
+      <tr><th>White Input</th><td>Sets the brightest input value. Pixels above this become pure white — increases highlight contrast.</td></tr>
+      <tr><th>Gamma / Midtones</th><td>Adjusts midtone brightness without crushing blacks or whites. <em>Higher gamma</em> darkens midtones, <em>lower</em> brightens them.</td></tr>
+    </table>
+  </div>
+
+  <div>
+    <h3>Output controls</h3>
+    <table>
+      <tr><th>Black Output</th><td>Limits how black the darkest pixels can be (raise for faded look).</td></tr>
+      <tr><th>White Output</th><td>Limits how bright highlights can be (lower to reduce harsh whites).</td></tr>
+    </table>
+  </div>
+</div>
+<div class="tip">All sliders update the histogram and the preview in real time. Use small steps for subtle changes and check the histogram to avoid clipping important details.</div>
+
+
+
+
+
+<p class="subTitle">Understanding channels</p>
+      <p>
+        The Levels dialog supports channel selection: <strong>RGB</strong> (all channels together), or individual channels <strong>R</strong>, <strong>G</strong>, <strong>B</strong>.
+      </p>
+      <ul>
+        <li><strong>RGB</strong>: remaps brightness across all channels — overall contrast/brightness adjustment.</li>
+        <li><strong>R</strong>: remaps the red channel only — useful for warming or cooling an image, or fixing red casts.</li>
+        <li><strong>G</strong>: remaps green values only — useful for neutralising green tints or enhancing foliage tones.</li>
+        <li><strong>B</strong>: remaps blue values only — useful to adjust coolness or remove blue casts.</li>
+      </ul>
+      <p class="note">Per-channel edits let you target color casts and tint shifts without affecting the overall luminance shape handled by RGB Levels.</p>
+
+
+
+
+<p class="subTitle">Applying Levels to multiple components</p>
+      <p>
+        To avoid blocking the main thread with heavy image processing, Levels only edits one component at a time in the dialog.
+        However, you can copy and paste Levels settings to other components quickly:
+      </p>
+      <ol>
+        <li>Adjust Levels on one image.</li>
+        <li>Click the <strong>Copy</strong> style icon at the top of the Levels dialog.</li>
+        <li>Select another bitmap or SVG component and press <span class="kbd">Alt + V</span> to paste the style.</li>
+      </ol>
+<p class="note">This applies the same numeric Levels settings to the target component without opening the dialog for each item—fast and convenient for batch consistency.</p>
+
+
+
+
+
+<p class="subTitle">Understanding the histogram</p>
+      <p>
+        The histogram shows how many pixels exist at each brightness level:
+      </p>
+      <ul>
+        <li><strong>Left</strong> = shadows (blacks)</li>
+        <li><strong>Middle</strong> = midtones (grays)</li>
+        <li><strong>Right</strong> = highlights (whites)</li>
+      </ul>
+      <p>
+        Tall spikes show concentration at that tonal value. When you move the input black/white sliders, the histogram helps you see clipping (sudden loss of detail) and whether you are stretching or compressing tonal ranges.
+      </p>
+<div class="tip">A gradient strip under the histogram shows the current mapping from input → output and helps visualize how tones are remapped across the range.</div>
+
+
+
+
+
+<p class="subTitle">Applying Levels to non-raster components</p>
+      <p>
+        Levels requires pixel data. To apply Levels to non-raster content (paths, panels, tilesets, texture fills), convert or flatten the object to a raster image:
+      </p>
+      <ol>
+        <li>Duplicate the component you want to preserve.</li>
+        <li>With the duplicate selected, press <span class="kbd">Ctrl + F</span> to <em>Flatten</em> into a raster component.</li>
+        <li>Open Levels on the flattened copy and apply adjustments.</li>
+      </ol>
+      <p class="note">Flattening creates a pixel snapshot of the vector/frame and is reversible only if you keep the original component. It's always better to duplicate first.</p>
+
+
+
+
+
+<p class="subTitle">Tips & best practices</p>
+      <ul>
+        <li>Always keep a copy of the original (or use the component's <code>baseCanvas</code>) so you can revert adjustments easily.</li>
+        <li>Use small gamma changes and watch the histogram to avoid crushed shadows or blown highlights.</li>
+        <li>When working on icons or pixel-art, disable smoothing (image smoothing) to retain crisp edges. Flatten at the native size before editing.</li>
+        <li>Use style copy/paste (Alt + V) to quickly standardize levels across multiple assets.</li>
+      </ul>
+
+
+
