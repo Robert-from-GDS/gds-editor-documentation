@@ -1,5 +1,5 @@
-const GDS_page_locationRoot="https://robert-from-gds.github.io/gds-editor-documentation/";
-//const GDS_page_locationRoot="";
+//const GDS_page_locationRoot="https://robert-from-gds.github.io/gds-editor-documentation/";
+const GDS_page_locationRoot="";
 const GDS_DOCS_contents={
     name:"mainNavBar",
     structure:[
@@ -75,7 +75,15 @@ const GDS_DOCS_contents={
 				 {type:"page" , name:"Simple text", id:"simple-text", htmlContentRef:GDS_page_locationRoot+"pages/text-component.html"},
 				 {type:"page" , name:"panels", id:"panel-based-components", htmlContentRef:GDS_page_locationRoot+"pages/panel-components.html"},
 				 {type:"page" , name:"Texture backgrounds", id:"texture-backgrounds", htmlContentRef:GDS_page_locationRoot+"pages/texture-backgrounds.html"},
-				 
+		        ]
+		},
+		{
+		 type:"category",
+		 id:"component-operations",
+		 name:"component-operations",
+		 contents:[
+				 {type:"page" , name:"Component operations", id:"components-operations-intro", htmlContentRef:GDS_page_locationRoot+"pages/component-operations-intro.html"}, //index page
+				 {type:"page" , name:"Levels editing", id:"levels-editor", htmlContentRef:GDS_page_locationRoot+"pages/levels-editor.html"},
 				]
 		},
 		{
@@ -116,7 +124,6 @@ const GDS_DOCS_contents={
 		 htmlContentRef:GDS_page_locationRoot+"pages/change-log.html",
 		},
 	]
-
 
 
 };
