@@ -84,6 +84,7 @@ const GDS_DOCS_contents={
 		 contents:[
 				 {type:"page" , name:"Component operations", id:"components-operations-intro", htmlContentRef:GDS_page_locationRoot+"pages/component-operations-intro.html"}, //index page
 				 {type:"page" , name:"Levels editing", id:"levels-editor", htmlContentRef:GDS_page_locationRoot+"pages/levels-editor.html"},
+				 {type:"page" , name:"Break apart operation", id:"break-apart-operation", htmlContentRef:GDS_page_locationRoot+"pages/break-apart-operation.html"},
 				]
 		},
 		{
