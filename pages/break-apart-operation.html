@@ -1,0 +1,51 @@
+<!--
+<p class="subTitle"></p>
+<div class="tip"></div>
+<div class="warning"></div>
+
+-->
+<h1>Break Apart Operation</h1>
+
+<p>
+The Break Apart operation allows you to take any visual component and separate it into individual “pixel islands.” 
+A pixel island is a visually isolated group of pixels surrounded by transparent space (alpha). 
+A common example is a texture atlas, where multiple graphics are packed into a single transparent PNG image.
+</p>
+
+
+<p class="subTitle">Accessing Break Apart</p>
+<p>
+The Break Apart operation can be performed on any visual component through the right-click context menu. 
+Select a component, then right-click on it to open the component menu. 
+When only one component is selected, the <strong>Break Apart</strong> option will appear in the menu.
+</p>
+
+<p>
+Because Break Apart is a heavy processing operation, it can only be applied to a single component at a time.  
+If multiple components are selected, the option will not appear in the context menu.
+</p>
+
+
+<p class="subTitle">How Break Apart Works</p>
+<p>
+Break Apart analyzes the selected component and separates its pixel islands into new independent components.  
+All resulting components are created as type <strong>"png"</strong>.  
+Only pixels that belong to each island are preserved — even if other pixels exist within the bounding box, they are clipped away.
+</p>
+
+<p>
+Break Apart currently does not apply any alpha threshold.  
+Any pixel with non-zero opacity (even 0.001) is considered part of an island.
+</p>
+
+<p>
+When the operation completes, the new components are added to the scene and automatically named using the parent component's name with a child number appended.
+</p>
+
+<p>
+If no pixel islands are detected, the operation will safely cancel without creating any new components.
+</p>
+
+<p>
+If pixel islands appear to be connected due to semi-transparent pixels, you can use the <strong>Scalpel</strong> tool to manually remove unwanted pixels before performing Break Apart.
+</p>

@@ -12,7 +12,22 @@ New ✨ or 🪄
 
 Removed ➖ or 🗑️
 -->
-<p class="subTitle">November 8th 2025 <small>1.6.<i>45</i></small></p>
+
+
+
+<p class="subTitle">November 10th 2025 <small>1.6.<i>47</i></small></p>
+<ul>
+  <li>🚀 Upgraded: Added color-coded indicators for each component type. Since GDS Editor supports a variety of components, such as vector based (SVG), bitmap formats (PNG, JPG, WebP), text, title, and GUI Studio components it can be difficult for users to immediately recognize what component type they’re working with. Now, when a component is selected or transformed, its type is displayed on the selection rectangle. If multiple components are selected, each individual selection rectangle reflects its corresponding color. Clicking the component type label opens both the Component Action Panel and the Component Data Panel.</li>
+  
+  <li>➕ Added: Break Apart function for all components. This feature separates any isolated regions ("islands") within a component. For example, if you have an atlas map, it will extract each region and place them into the scene as individual PNG components. Islands will be extracted based on their active pixels, not on bounding rectangle, meaning that bounding overlaps of adjacent items will be excluded and only the island data will be moved to the new component. The Break Apart function automatically flatterns and converts all separated elements into PNG components.</li>
+   <li>🛠️ Fixed issue: Issue when reimporting tilesets, corryupted position infirmation caused failure on load.</li>
+</ul>
+
+
+
+
+
+<p class="subTitle">November 8th 2025 <small>1.6.<i>46</i></small></p>
 <ul>
   
    
