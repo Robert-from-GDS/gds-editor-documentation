@@ -1,0 +1,50 @@
+<h1>Auto saving</h1>
+
+<p>As of version 1.6.58, GDS Editor includes an auto-saving recovery feature. Auto-save is enabled by default and uses the browser’s internal storage to back up your last working scenes every five minutes, or at a user-defined interval. To keep storage usage low, auto-save will only store your last fifteen worked-on scenes. You may also use auto-save as a convenient backup system when leaving the editor, but its primary purpose is to act as a recovery system for lost work.</p>
+
+<p>Save location</p>
+<p>The GDS Editor auto-save feature stores your save files in your browser’s local storage, specifically in IndexedDB. If your browser does not support IndexedDB, or you have blocked access to it, auto-save will silently fail. Additionally, if you clear all data associated with GDS Editor, your backup files will be permanently deleted. Auto save is primarily a recovery system for accidental closes, and crashes. It is important that you save all important work to your local disk.</p>
+
+<div class="warning">
+  ⚠️ Clearing browser data associated with GDS Editor will delete your backups and auto-save files. IndexedDB is not infallible, and it is still recommended to make regular local saves of your work.
+</div>
+
+<p>Auto-save flow</p>
+<p>A backup of the scene you are working on is created in the background every five minutes (configurable). This backup is pushed to your “last worked on” scene list, which contains up to fifteen entries. The auto-saver does not create a new save file for every interval; instead, each unique scene has a single entry that is updated over time. When the list exceeds the maximum number of permitted save files, the oldest entry is automatically deleted to make room for the newest.</p>
+
+<p>A “unique scene” is any new scene you load into the editor. Because the editor allows you to load the same base file multiple times, each loaded instance is treated as its own save file—unless it is reloaded from the auto-save list. This prevents name and ID collisions and avoids accidental overwrites.</p>
+
+<p>Turning off auto-save</p>
+<p>Auto-save is enabled by default and provides protection against accidental browser closures and blocking bugs in GDS Editor. It is recommended to keep it enabled. However, if you wish to turn it off, you can do so in the app configuration menu under the Auto-Save heading.</p>
+
+<p>Setting the auto-save interval</p>
+<p>You can change how often GDS Editor backs up your work in the app configuration menu. Please note that you may experience a brief pause while the editor creates the save file in the background. Currently, backups occur on the main thread, and setting a very fast interval may degrade your experience.</p>
+
+<p>Forcing an auto-save</p>
+<p>You can manually trigger an auto-save at any time using the hotkey <strong>[Alt + S]</strong>. If you are using Firefox, use <strong>[Space + S]</strong>. You can also trigger a manual auto-save from the Scene Settings menu. Manual auto-saves override all timing rules and will create a save point even for empty scenes.</p>
+
+<p>Backup workflow</p>
+<p>GDS Editor manages the auto-save system as efficiently as possible and avoids creating saves for empty or temporary scenes.</p>
+
+<p>When a scene is loaded or created, an auto-save is not generated immediately. The first auto-save occurs only after the minimum required time has been spent working on that specific scene. The timer pauses whenever the editor window is not focused or the user is working in another tab.</p>
+
+<p>If no existing save point is associated with the scene, GDS Editor will create a new entry in the auto-save and recovery list. If the list is full, the editor will automatically delete the oldest worked-on scene to make room for the new entry.</p>
+
+<p>Limitations</p>
+<p>To manage memory and prevent storage bloat, the auto-saver will only save 10 files up to a maximum of 20&nbsp;MB. If your GDS files exceed this size, you should save to your local disk and remove unused components where possible. GDS Editor will only store a maximum of ten files; when more than ten backups exist, the oldest files will be deleted first.</p>
+
+<p>Restoring a save file</p>
+<p>You can browse and load your auto-save files at any time by clicking the save-file icon in the top-left menu. You can also delete and manage these save files via the drop-down list.</p>
+
+<p>Versioning</p>
+<p>Binding auto-saves</p>
+<p>When reloading an auto-save from the drop-down list, users have the option to bind the loaded file to the existing auto-save entry. This prevents the auto-saver from creating a new save file and allows the editor to continue updating the original entry. This helps reduce unnecessary deletion of older files and preserves more history.</p>
+
+<p>Duplicate reloads</p>
+<p>Because GDS Editor allows multiple copies of the same scene to be loaded, if the editor detects that you have already loaded a scene from the auto-save list, a new save entry will be created for the duplicate instance.</p>
+
+<p>Save files across tabs</p>
+<p>The auto-save system uses IndexedDB, which is tied to the domain. If you use GDS Editor across multiple tabs and work from an auto-save in both tabs, the auto-save entry will update across all tabs.</p>
+
+<p>Deleting a save file</p>
+<p>You can delete backups and recovery files at any time from the auto-save and recovery list used to load files.</p>
