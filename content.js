@@ -60,6 +60,7 @@ const GDS_DOCS_contents={
 				 {type:"page" , name:"Category operations", id:"category-options", htmlContentRef:GDS_page_locationRoot+"pages/category-operations.html"},
 				 {type:"page" , name:"Scene settings", id:"scene-settings", htmlContentRef:GDS_page_locationRoot+"pages/scene-settings.html"},
 				 {type:"page" , name:"The scene list", id:"the-scene-list", htmlContentRef:GDS_page_locationRoot+"pages/the_scene_list.html"},
+				 {type:"page" , name:"Auto Saving", id:"auto-saving", htmlContentRef:GDS_page_locationRoot+"pages/auto-saving.html"},
 				]
 		},
 		{
